@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Private Payment Gateway ShopeePay</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; background-color: #f4f4f9; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #ee4d2d; }
+        .feature-box { background: #fff5f5; padding: 15px; border-left: 5px solid #ee4d2d; margin-bottom: 20px; }
+        input { padding: 10px; width: 70%; border: 1px solid #ccc; border-radius: 5px; }
+        button { padding: 10px 15px; background: #ee4d2d; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        #result { margin-top: 20px; padding: 15px; background: #272822; color: #f8f8f2; border-radius: 5px; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; }
+        .status-ok { color: #a6e22e; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Private Payment Gateway ShopeePay</h1>
+        <div class="feature-box">
+            <strong>Fitur Utama:</strong>
+            <ul>
+                <li>Create QRIS Dinamis</li>
+                <li>Auto Check Status Pembayaran</li>
+                <li>Support Callback Real-time</li>
+            </ul>
+        </div>
+        
+        <input type="text" id="sn" placeholder="Masukkan Transaction SN">
+        <button onclick="check()">Cek API</button>
+        
+        <h3>Hasil Pengecekan:</h3>
+        <div id="result">Menunggu input...</div>
+    </div>
+
+    <script>
+        async function check() {
+            const sn = document.getElementById('sn').value;
+            const resEl = document.getElementById('result');
+            if(!sn) return alert('Masukkan SN');
+            resEl.innerText = 'Memeriksa API...';
+            try {
+                const res = await fetch('/cekpembayaran/transaction_sn=' + sn);
+                const data = await res.json();
+                if(data.status === 'success') {
+                    resEl.innerHTML = `<span class="status-ok">STATUS: AMAN (API BERFUNGSI)</span>\n\n${JSON.stringify(data, null, 2)}`;
+                } else {
+                    resEl.innerText = 'STATUS: GAGAL / ERROR\n' + JSON.stringify(data, null, 2);
+                }
+            } catch(e) {
+                resEl.innerText = 'Error koneksi: ' + e.message;
+            }
+        }
+    </script>
+</body>
+</html>

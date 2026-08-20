@@ -1,0 +1,9 @@
+{
+  "X_TOB_TOKEN": "YOUR_X_TOB_TOKEN_HERE",
+  "X_STORE_ID": "YOUR_STORE_ID_HERE",
+  "device_id": "YOUR_DEVICE_ID_HERE",
+  "device_fingerprint": "YOUR_DEVICE_FINGERPRINT_HERE",
+  "device_model": "YOUR_DEVICE_MODEL_HERE",
+  "device_brand": "YOUR_DEVICE_BRAND_HERE",
+  "sz_blackbox": "YOUR_SZ_BLACKBOX_HERE"
+}
