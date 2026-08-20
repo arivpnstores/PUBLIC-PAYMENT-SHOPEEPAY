@@ -1,4 +1,4 @@
-# ShopeePay Dynamic QRIS Generator
+# Payment Getway ShopeePay Partner, Dynamic QRIS Generator
 
 Private Payment Gateway untuk membuat QRIS ShopeePay dinamis dan mengecek status pembayaran.
 
