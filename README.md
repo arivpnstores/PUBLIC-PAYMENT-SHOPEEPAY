@@ -14,7 +14,8 @@ Private Payment Gateway untuk membuat QRIS ShopeePay dinamis dan mengecek status
 - ✅ Auto Check Status Pembayaran  
 - ✅ Web UI untuk testing
 - ✅ Support PM2 untuk production
-- ✅ Konfigurasi terpisah (aman untuk public repo)
+- ✅ Konfigurasi terpisah Isi di config.json
+- ✅ Cek Pembayaran melalui transaction_sn (Tanpa random Fee)
 
 ## Struktur Project
 ```
