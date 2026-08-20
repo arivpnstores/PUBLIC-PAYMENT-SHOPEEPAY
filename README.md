@@ -51,6 +51,8 @@ notepad config.json    # Windows
 ```
 
 ### 3. Isi `config.json`
+Senif Data ini Menggunakan Aplikasi ProxyPin (HP ROOT ONLY)
+Jasa Senif Data Rp5.000, Chat admin saja
 ```json
 {
   "X_TOB_TOKEN": "TOKEN_DARI_SHOPEEPAY",
