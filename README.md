@@ -20,6 +20,7 @@ Private Payment Gateway untuk membuat QRIS ShopeePay dinamis dan mengecek status
 ## Struktur Project
 ```
 PUBLIC-PAYMENT-SHOPEEPAY/
+├── shopee-pay.js          # Contoh Panggilan Payment Nya
 ├── server.js              # Main server (Express-like HTTP)
 ├── index.html             # Web UI testing
 ├── ecosystem.config.js    # PM2 configuration
